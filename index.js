@@ -15,6 +15,10 @@ app.use(passport.initialize());
 app.use('/api',passport.authenticate('jwt', { session: false }));
 require("dotenv").config();
 
+app.get('/',(req,res)=>{
+    res.send('Deploy Project Successfully');
+})
+
 const user = require("./controller/users/user");
 app.use('/user',user);
 
