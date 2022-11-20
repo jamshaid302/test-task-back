@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cross-env NODE_ENV=development&&node index.js",
+    "test": "cross-env NODE_ENV=test&& jest --config",
+    "test:watch": "npm run test -- --watch"
   },
   "author": "",
   "license": "ISC",
@@ -23,5 +24,25 @@
     "nodemon": "^2.0.19",
     "passport": "^0.6.0",
     "passport-jwt": "^4.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "cross-env": "^7.0.3"
+  },
+  "jest": {
+    "verbose": true,
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/client/assetsTransformer.js"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "transform": {
+      "\\.js$": "<rootDir>/node_modules/babel-jest"
+    }
   }
 }

@@ -1,0 +1,10 @@
+{
+  "moduleFileExtensions": ["js", "json"],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testRegex": ".e2e.spec.ts$",
+  "transform": {
+    "\\.js$": "<rootDir>/node_modules/babel-jest"
+  },
+  "setupFilesAfterEnv": ["./jest.setup.js"]
+}
