@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
-    "start": "cross-env NODE_ENV=development&&node index.js",
+    "start": "export NODE_ENV=development&&node index.js",
     "test": "cross-env NODE_ENV=test&& jest --config",
     "test:watch": "npm run test -- --watch"
   },
