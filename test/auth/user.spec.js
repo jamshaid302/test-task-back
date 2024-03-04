@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const User = require('../../services/users/user');
 
-describe('project list test', () => {
+describe('project auth test', () => {
     beforeAll( async () => {
         const db = await mongoose.connect(
             'mongodb+srv://jamshaid:jamshaid@cluster0.aycmrpn.mongodb.net/test_db_for_virtuenetz'
